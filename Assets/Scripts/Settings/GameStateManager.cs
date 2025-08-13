@@ -95,7 +95,7 @@ public class GameStateManager : MonoBehaviour
         Debug.Log("Game Started");
     }
 
-    public void PlayBackgroundMusic(AudioClip clip, float volume = 1f)
+    public void PlayBackgroundMusic(AudioClip clip, float volume = 0.4f)
     {
         if (backgroundSource.clip == clip) return;
         backgroundSource.clip = clip;

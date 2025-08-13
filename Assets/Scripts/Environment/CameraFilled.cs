@@ -5,6 +5,7 @@ public class CameraFilled : MonoBehaviour
 {
     [SerializeField]
     float targetWorldWidth = 16f; // tu ancho de diseño
+    
     void LateUpdate()
     {
         var cam = GetComponent<Camera>();
