@@ -37,11 +37,9 @@ public class ProjectileMovement : MonoBehaviour
 
     public void StartMovement()
     {
-        var direction = player.transform.position - spawner.transform.position;
-
         if(projectileDirection == ProjectileDirection.HORIZONTAL)
-            rb.linearVelocityX = speed * (direction.x >= 0 ? 1 : -1);
+            rb.linearVelocityX = speed * (spawner.transform.position.x >= 0 ? -1 : 1);
         else
-            rb.linearVelocityY = speed * (direction.y >= 0 ? 1 : -1);
+            rb.linearVelocityY = speed * (spawner.transform.position.y >= 0 ? -1 : 1);
     }
 }

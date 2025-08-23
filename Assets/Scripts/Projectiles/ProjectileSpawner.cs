@@ -39,7 +39,14 @@ public class ProjectileSpawner : MonoBehaviour
     {
         if (GameStateManager.Instance.CurrentGameState == GameState.PLAYING &&
             !projectile.activeSelf && (lastProjectilDestroy < Time.time))
+        {
             InvokeProjectile();
+        }
+    }
+
+    void OnEnable()
+    {
+        UpdateTimeProjectileDestroy();
     }
 
     public void UpdateTimeProjectileDestroy() => lastProjectilDestroy = Time.time + Random.Range(1f, projectileTimeCD);

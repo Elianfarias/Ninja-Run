@@ -10,8 +10,6 @@ public class Movement : MonoBehaviour
     [SerializeField]
     float speed = 5f;
     [SerializeField]
-    float dashForce = 300f;
-    [SerializeField]
     Vector2 initialPosition;
     [SerializeField]
     GameObject InstructionsPC;
